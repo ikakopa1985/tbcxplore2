@@ -32,7 +32,6 @@ class CardViewset(viewsets.ModelViewSet):
 
 
     def patch(self, request, *args, **kwargs):
-        """ბარათის განახლება (PUT/PATCH)"""
         card_id = request.data.get("card_id")
         if not card_id:
             return Response({"error": "Card ID is required"}, status=status.HTTP_400_BAD_REQUEST)
