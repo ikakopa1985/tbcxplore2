@@ -29,7 +29,6 @@ class CardViewset(viewsets.ModelViewSet):
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
     def patch(self, request, *args, **kwargs):
         card_id = request.data.get("card_id")
         if not card_id:
